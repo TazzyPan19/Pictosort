@@ -1,80 +1,13 @@
-<!DOCTYPE html>
-<html lang="EN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An application for an user to edit the metadata of multiple image files.">
-    <meta name="author" content="Timothy Branco">
-    <title>Pictosort | Image Naming Tool</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700"
-        rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-
-<body>
-    <main style="width: 800px; margin: auto;">
-        <h1 class="kulim-park-thick">Pictosort</h1>
-        <p class="kulim-park-regular">An application for an user to edit the metadata of multiple image files.</p>
-        <article>
-            <div style="display: flex; justify-content: space-between; margin: 20px 0px;">
-                <div id="input-prefix-type">
-                    <label class="kulim-park-regular">Prefix</label>
-                    <div>
-                        <input class="prefix-input" type="text" required maxlength="20" placeholder="IMG_">
-                    </div>
-                </div>
-                <div id="input-format-type">
-                    <label class="kulim-park-regular">Format</label>
-                    <div>
-                        <select class="selection-box" name="format-type" id="format-type">
-                            <option value="0">1</option>
-                            <option value="00">2</option>
-                            <option value="000">3</option>
-                            <option value="0000">4</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="input-file-type">
-                    <label class="kulim-park-regular">Select a file type</label>
-                    <div class="file-type-group" id="file-type">
-                        <button id="jpg-file-type-btn" class="jpg-file-type-btn kulim-park-regular" value=".jpg"
-                            type="button">JPG</button>
-                        <button id="png-file-type-btn" class="png-file-type-btn kulim-park-regular" value=".png"
-                            type="button">PNG</button>
-                    </div>
-                </div>
-            </div>
-            <div id="preview-naming" class="kulim-park-regular">
-                <label>Image naming preview</label>
-                <div class="preview-box">
-                    <span class="default-font-size" id="image-name-output" style="color: #6b6b6b;"></span>
-                </div>
-            </div>
-            <div class="file-input-box">
-                <span class="kulim-park-regular" style="position: absolute;">Upload file here</span>
-                <input id="file-input" type="file" multiple="multiple" accept="image/png, image/jpeg, image/jpg">
-            </div>
-        </article>
-        <article>
-            <div class="column-bar">
-                <ul class="flex-1 kulim-park-regular">
-                    <li class="column-width column-title">#No</li>
-                    <li class="column-width column-title">Image</li>
-                    <li style="width: 50px; margin: 0px 20px;" class="column-title">Name</li>
-                </ul>
-            </div>
-            <ul id="display-images" class="kulim-park-regular"></ul>
-            <button onclick="submitNameChange()" class="kulim-park-regular" id="submit-download">Submit and
-                Download</button>
-        </article>
-    </main>
-    <script type="text/javascript" src="./js/exif.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pictosort</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
