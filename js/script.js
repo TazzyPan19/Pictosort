@@ -55,7 +55,7 @@ fileTypeField.addEventListener("click", (e) => {
 function submitNameChange() {
   if (prefix.length === 0 || format.length === 0 || filetype.length === 0) {
     console.log(
-      "Please update the prefix, format or filetype field with the correct values!"
+      "Please update the prefix, format or filetype field with the correct values!",
     );
   } else {
     console.log("Prefix:", prefix, "Format:", format, "Filetype:", filetype);
@@ -65,26 +65,37 @@ function submitNameChange() {
 
 // NOTE Functionality for uploading images from a users file
 
+let image;
+let numberList = 1;
+
 document.getElementById("file-input").onchange = function (e) {
   displayImages.style.display = "block";
-  var file = e.target.files[0];
-  if (file && file.name) {
-    EXIF.getData(file, function () {
-      console.log(this);
-      const image = `
-        <li class="image-list">
-            <div class="image-number"><span style="width: 100%;">${
-              1 + "."
-            }</span>
-            </div>
-            <div style="object-fit: cover;">
-                <img src="${URL.createObjectURL(file)}" alt="${file.name}">
-            </div>
-            <div style="width: unset;" class="image-name">
-                <span>${file.name}</span>
-            </div>
-        </li>`;
-      displayImages.innerHTML = image;
-    });
+  var files = e.target.files;
+
+  for (const [key, file] of Object.entries(files)) {
+    if (file && file.name) {
+      EXIF.getData(file, function () {
+        displayImages.innerHTML += `
+          <li class="image-list">
+              <div class="column-width image-number"><span style="width: 100%;">${
+                numberList + "."
+              }</span>
+              </div>
+              <div style="object-fit: cover;">
+                  <img src="${URL.createObjectURL(file)}" alt="${file.name}">
+              </div>
+              <div style="width: unset;" class="image-name">
+                  <span>${file.name}</span>
+              </div>
+          </li>`;
+        numberList++;
+      });
+    }
   }
 };
+
+// const files = document.getElementById("file-input").files;
+
+//   for (const [key, value] of Object.entries(files)) {
+//     console.log(`${key}: ${value.name}`);
+//   }

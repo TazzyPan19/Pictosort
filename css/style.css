@@ -30,7 +30,7 @@ img {
 }
 
 .column-width {
-  width: 50px;
+  width: 80px;
 }
 
 .kulim-park-regular {
@@ -50,7 +50,7 @@ img {
 }
 
 .column-title {
-  width: 200px;
+  width: 80px;
   text-align: start;
 }
 
@@ -133,7 +133,7 @@ input[type="file"] {
 }
 
 .image-list > div {
-  width: 50px;
+  width: 80px;
 }
 
 .prefix-input:focus-visible {
