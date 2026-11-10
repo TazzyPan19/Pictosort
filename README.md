@@ -1,11 +1,18 @@
-# TB25 Quick Fix
+# Pictosort - Image Naming Tool
 
-An application using EXIF.js to edit metadata from various image types.
+An application tool using exif metadata to modify / change image names easily for beginner, hobbyist and intermediate photographers.
 
-# Resources
+### Usage
 
-EXIF.js Library: https://github.com/exif-js/exif-js
+Most photographers already know image naming convention defaults such as "IMG_001.JPG" and "IMAGE-001.JPG". To get the same format type, the user needs to define the prefix (IMG) and the format (000) with Pictosort.
 
-How to Upload Images with JavaScript ( The Ultimate Guide ) - JavaScript - Part #1 :https://www.youtube.com/watch?app=desktop&v=EaBSeNSc-2c
+### Disclaimer
 
-Multiple Images to Zip File Download | JavaScript Tutorial: https://www.youtube.com/watch?app=desktop&v=83YNsdRzlqQ
+This tool is not recommended for any large data. Chromium browsers are recommended to modify local files on the user's system with expressed permission.
+
+---
+
+### Libraries
+
+- [exif.js](https://github.com/exif-js/exif-js)
+- [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
