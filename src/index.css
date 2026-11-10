@@ -3,6 +3,12 @@
 :root {
   --script-font: "Bebas Neue", system-ui;
   --gabarito-font: "Gabarito", sans-serif;
+  --background-color: #ececec;
+  --gray-mist: #b8b8b8;
+  --yellow-dark: #6c5300;
+  --yellow-light: #ffe17a;
+  --green-dark: #197300;
+  --green-light: #c9ff7a;
 }
 
 input[type="file"] {
